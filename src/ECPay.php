@@ -1,7 +1,7 @@
 <?php
 
 namespace Travis0125\ECPay;
-//Ecpay
+
 class ECPay
 {
     private $instance = null;
