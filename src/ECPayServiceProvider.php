@@ -32,7 +32,7 @@ class ECPayServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(ECPay::class, function ($app) {
+        $this->app->singleton('ecpay', function ($app) {
             return new ECPay();
         });
     }
