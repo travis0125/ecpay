@@ -19,7 +19,7 @@ class ECPaySend extends \ECPay_Send
     {
         $arParameters = self::process($arParameters, $arExtend);
         //產生檢查碼
-        $szCheckMacValue = ECPay_CheckMacValue::generate($arParameters, $HashKey, $HashIV, $arParameters[ 'EncryptType' ]);
+        $szCheckMacValue = \ECPay_CheckMacValue::generate($arParameters, $HashKey, $HashIV, $arParameters[ 'EncryptType' ]);
 
         $parameters = array_merge($arParameters, ['CheckMacValue' => $szCheckMacValue]);
 
