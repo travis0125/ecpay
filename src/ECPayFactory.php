@@ -9,7 +9,7 @@ class ECPayFactory extends \ECPay_AllInOne
     {
         $arParameters = array_merge(['MerchantID' => $this->MerchantID, 'EncryptType' => $this->EncryptType], $this->Send);
 
-        return EcpaySend::CheckOutString($paymentButton, $target = "_self", $arParameters, $this->SendExtend, $this->HashKey, $this->HashIV, $this->ServiceURL);
+        return ECPaySend::CheckOutString($paymentButton, $target = "_self", $arParameters, $this->SendExtend, $this->HashKey, $this->HashIV, $this->ServiceURL);
     }
 
     //取得付款結果通知的方法
