@@ -1,13 +1,13 @@
 {
     "name": "travis0125/ecpay",
-    "description": "Ecpay laravel package for Laravel 5",
+    "description": "ECPay laravel package for Laravel 5",
     "keywords": ["綠界", "ecpay"],
+    "license": "MIT",
+    "type": "library",
     "require": {
         "php": ">=7.2",
-        "laravel/framework": "^6|^7|^8"
+        "laravel/framework": "^5|^6|^7|^8"
     },
-    "type": "library",
-    "license": "MIT",
     "authors": [
         {
             "name": "Travis Chen",
@@ -23,5 +23,15 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Travis0125\\ECPay\\ECPayServiceProvider"
+            ],
+            "aliases": {
+                "ECPay": "Travis0125\\ECPay\\Facades\\ECPay"
+            }
+        }
+    }
 }
