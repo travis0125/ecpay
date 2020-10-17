@@ -17,6 +17,6 @@ class ECPayFactory extends \ECPay_AllInOne
     {
         $ecpayPost = $ecpayPost ? $ecpayPost : $_POST;
 
-        return ECPay_CheckOutFeedback::CheckOut(array_merge($ecpayPost, ['EncryptType' => $this->EncryptType]));
+        return \ECPay_CheckOutFeedback::CheckOut(array_merge($ecpayPost, ['EncryptType' => $this->EncryptType]));
     }
 }
