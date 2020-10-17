@@ -7,13 +7,6 @@ use Illuminate\Support\ServiceProvider;
 class ECPayServiceProvider extends ServiceProvider
 {
     /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
-    /**
      * Bootstrap the application events.
      */
     public function boot()
@@ -35,15 +28,5 @@ class ECPayServiceProvider extends ServiceProvider
         $this->app->singleton('ecpay', function ($app) {
             return new ECPay();
         });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [ECPay::class, 'ecpay'];
     }
 }
